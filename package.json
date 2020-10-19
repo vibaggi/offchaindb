@@ -1,0 +1,38 @@
+{
+  "name": "offchaindb",
+  "version": "0.0.1",
+  "description": "Listener para espelhar a database de um peer blockchain. Objetivo de processar melhor os dados por fora da rede.",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "npm run build",
+    "postbuild": "cp ./src/config/*.json dist/config ",
+    "build": "tsc -p .",
+    "build:watch": "tsc -w",
+    "start": "nodemon -r dotenv/config ./dist/index.js dotenv_config_path=local.env",
+    "local": "npm run prestart && nodemon -r dotenv/config ./dist/index.js dotenv_config_path=local.env",
+    "dev": "npm run prestart && nodemon -r dotenv/config ./dist/index.js dotenv_config_path=dev.env",
+    "uat": "npm run prestart && nodemon -r dotenv/config ./dist/index.js dotenv_config_path=uat.env",
+    "lint": "eslint . --ext .ts",
+    "lint-and-fix": "eslint . --ext .ts --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Vitor Baggi",
+  "license": "MIT",
+  "dependencies": {
+    "fabric-ca-client": "^1.4.8",
+    "fabric-network": "^1.4.8",
+    "mongodb": "^3.6.2"
+  },
+  "devDependencies": {
+    "@types/mongodb": "^3.5.28",
+    "@types/node": "12",
+    "@typescript-eslint/eslint-plugin": "^2.24.0",
+    "@typescript-eslint/parser": "^2.24.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2",
+    "ts-node": "^8.6.2",
+    "typescript": "^3.8.3"
+  }
+}
