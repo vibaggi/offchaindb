@@ -10,5 +10,5 @@ O couchdb do peer não é capaz de executar alguns recursos de busca como aggreg
 
 ## Como funciona
 
-Este microserviço cria um Listener de Bloco. Ou seja, toda vez que um bloco fecha na rede o listener o captura e processa. 
-Dentro do bloco extraimos os assets que foram alterados e atualizamos em um mongodb fora da rede. 
+Este microserviço cria um Listener de Bloco. Ou seja, toda vez que um bloco fecha na rede, o listener o captura e processa. 
+Dentro do bloco extraimos os assets que foram alterados e atualizamos em um mongodb fora da rede.
