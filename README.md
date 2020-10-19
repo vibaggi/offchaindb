@@ -12,3 +12,8 @@ O couchdb do peer não é capaz de executar alguns recursos de busca como aggreg
 
 Este microserviço cria um Listener de Bloco. Ou seja, toda vez que um bloco fecha na rede, o listener o captura e processa. 
 Dentro do bloco extraimos os assets que foram alterados e atualizamos em um mongodb fora da rede.
+
+
+<img src="/docs/imgs/arquitetura.png" width="800" title="Arquitetura">
+
+Com um mongodb poderá executar queries complexas de forma mais eficiente e sem sobrecarregar o peer.
